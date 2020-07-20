@@ -1,0 +1,30 @@
+body  {background-image:url("ba1.jpg");background-attachment:fixed;font-family:'comic sans ms'}
+A     {color:#ad1805}
+form  {color:#123456}
+div   {background:rgba(0,0,0,0.8);}
+.cancelbtn {width: auto;padding: 10px 20px;background-color:blue;}
+.c1 {cursor : help}
+.c2 {cursor : not-allowed}
+.c3 {cursor : progress}
+.c4 {cursor : none}
+.c5 {cursor : cell}
+.wrap{
+max-width: 350px;
+border-radius:20px;
+margin:auto;
+background:rgba(0,0,0,0.8);
+padding: 40px;
+color:#fff;
+margin-top:100px;
+}
+.prestyle{
+font-style: 'comic sans ms';
+font-size: 20px;
+text-align:center;
+}
+.image{
+border:2px;
+border-radius:20px;
+color:#fff;
+margin:auto
+}

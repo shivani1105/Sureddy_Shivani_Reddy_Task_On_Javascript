@@ -1,0 +1,67 @@
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+<script language="javascript" type="text/javascript">
+function validate(){
+var un=new RegExp("^[a-zA-Z]+$","g"); 
+var pw=new RegExp("^[a-zA-Z0-9]+$","g"); 
+var mob=new RegExp("^[0-9]+$","g"); 
+var em=new RegExp("^[a-zA-Z0-9_.]+@[a-zA-Z0-9]+.[a-zA-Z]{2,4}$","g"); 
+var uname=document.f.un1.value; 
+var pwd=document.f.p.value; 
+var mobile=document.f.pn.value; 
+var email=document.f.e.value; 
+if(uname.match(un)){ 
+ if(uname.length>=6){ 
+  if(pwd.match(pw)){ 
+   if(pwd.length>=8){ 
+       if(mobile.match(mob)){ 
+         if(mobile.length==10){ 
+              if(email.match(em)) 
+                alert("Form is submitted successfully");  
+                else 
+				alert("Invalid email");
+				} 
+             else 
+               alert("Mobile number should be 10 digits");        
+			   } 
+           else 
+             alert("Invalid mobile number");
+			 } 
+          else 
+             alert("password must be atleast 8 characters");
+			 } 
+        else 
+           alert("Invalid password");
+		   } 
+      else 
+         alert("user name must have atleast 6 characters");
+		 } 
+else 
+ alert("Invalid user name");} 
+</script>
+</head>
+<body>
+<form name="f" class="wrap" onsubmit="validate()">
+<h1 align="center">Registration Form</h1>
+<b>User&nbsp;Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>
+<input type="text" name="un1"  placeholder="username" width="100%" padding=30px required></br></br>
+    
+<b>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>
+<input type="email" name="e" placeholder="example@gmail.com" required></br></br>
+<b>Phone No. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>
+<input type="text" name="pn" placeholder="phone number" required></br></br>
+
+
+
+<b>Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b>
+<input type="password" name="p" placeholder="Password" required=""></br>
+<font size="1">(password must contain atleast 6 characters,1 digit,1special character)</font></br></br> 
+    <input type="reset" value="cancel">&nbsp;&nbsp;&nbsp;
+   <input type="submit" value="register" ><br>
+   <p>Already have an account?&nbsp;&nbsp;&nbsp;<a href="#">Login</a></p></br>
+  </form>
+  
+</body>
+
+</html>
